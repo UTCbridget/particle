@@ -33,3 +33,5 @@ components:
     organisms: ../../../dist/assets/atomic/_patterns/03-organisms
     templates: []
     pages: []
+ckeditor5-stylesheets:
+  - ../../../source/default/_patterns/00-protons/legacy/css/ck-editor-5.css
