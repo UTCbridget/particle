@@ -75,7 +75,7 @@
 .btn-info {
   @apply bg-white;
   @apply text-utc-new-blue-500;
-  border: 2px solid #112e51;
+  border: 1px solid #112e51;
 }
 
 .btn--navy-outline:hover,
@@ -84,7 +84,7 @@
 .btn-info:active {
   @apply bg-utc-new-blue-500;
   @apply text-white;
-  border: 2px solid #112e51;
+  border: 1px solid #112e51;
   box-shadow: inset 0px 0px 5px #403636;
 }
 
@@ -120,14 +120,14 @@
 .btn--white-outline {
   background-color: transparent;
   @apply text-white;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .btn--white-outline:hover,
 .btn--white-outline:active {
   @apply bg-utc-new-gold-500;
   @apply text-utc-new-blue-500;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .btn--white-outline:focus {
