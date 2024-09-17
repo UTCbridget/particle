@@ -474,7 +474,7 @@ a.diagonal.light-gray-hero:hover svg {
   a.diagonal-white:not(.btn):not(.ckeditor-accordion-toggler) {
   color: #112e51;
   background-color: transparent;
-  background-image: linear-gradient(-257deg, #112e51 50%, transparent 50%);
+  background-image: linear-gradient(-257deg, #112e51 50%, #fff 50%);
 }
 .UTCtextblock__links
   a.diagonal-gold:not(.btn):not(.ckeditor-accordion-toggler) {
