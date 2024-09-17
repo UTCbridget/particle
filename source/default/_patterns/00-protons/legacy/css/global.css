@@ -20,7 +20,6 @@ html {
 .table .thead-dark th .label {
   color: #fff;
 }
-
 /* removes title lines coming from the parent mag */
 
 .block--region-content-header.block--page-title-block:after,
@@ -36,7 +35,7 @@ html {
   z-index: 0;
 }
 
-.hellowordl {
+.helloworld {
   background: red;
 }
 
