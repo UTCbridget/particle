@@ -6,13 +6,13 @@
     #12263c 15px,
     #12263c 20px
   );
-  padding: 24px;
+  padding: 24px 36px 48px;
   border: 1px solid #112e51;
   color: #fff;
 }
 img.tuition-power-c {
-  max-width:3.25rem;
-  margin-right:18px;
+  max-width: 3.25rem;
+  margin-right: 18px;
 }
 #tuition-calculator-region h2 {
   color: #fdb736;
@@ -86,7 +86,7 @@ img.tuition-power-c {
 .selection-2-true .form-item-field-delivery-type-value a.bef-link--selected,
 .selection-3-true .form-item-field-residency-type-value a.bef-link--selected {
   background: #fdb736;
-  color: #112e51!important;
+  color: #112e51 !important;
 }
 
 #edit-submit-tuition-calculator,
@@ -118,7 +118,7 @@ h3.empty-tuition {
   margin-top: -24px;
   margin-bottom: 24px;
   font-size: 1.25rem;
-  color:#112e51;
+  color: #112e51;
 }
 h3.empty-tuition {
   text-align: center;
@@ -164,4 +164,13 @@ span.required-wrapper {
 td.tuition-req {
   padding-left: 0;
   padding-top: 0;
+}
+
+@media (max-width: 640px) {
+  .utc-tuition-form {
+    grid-template-columns: 1fr;
+  }
+  .tuition-price {
+    width: 100px;
+  }
 }
