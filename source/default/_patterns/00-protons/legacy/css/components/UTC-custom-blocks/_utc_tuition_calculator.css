@@ -111,6 +111,7 @@ img.tuition-power-c {
 .selection-1-true.selection-2-true.selection-3-true #tuition-results-block {
   height: fit-content !important;
   display: block;
+  max-height: 190px;
 }
 #tuition-results-block,
 h3.empty-tuition {
