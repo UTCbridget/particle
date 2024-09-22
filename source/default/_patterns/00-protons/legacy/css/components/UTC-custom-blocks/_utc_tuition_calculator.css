@@ -1,0 +1,246 @@
+#tuition-calculator-region {
+  background: repeating-linear-gradient(
+    -77deg,
+    #0b1e33,
+    #0b1e33 15px,
+    #12263c 15px,
+    #12263c 20px
+  );
+  padding: 24px 36px 48px;
+  border: 1px solid #112e51;
+  color: #fff;
+  height: fit-content;
+}
+img.tuition-power-c {
+  max-width: 3.25rem;
+  margin-right: 18px;
+}
+#tuition-calculator-region h2 {
+  color: #fdb736;
+}
+#tuition-calculator-region p {
+  color: #fff;
+}
+#tuition-calculator-region .views-element-container .view-header a,
+#tuition-calculator-region
+  .views-element-container
+  .view-footer
+  a:not(.diagonal) {
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  text-decoration: none !important;
+  background-image: linear-gradient(#fff, #fff);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  transition: all 0.3s;
+}
+#tuition-calculator-region .views-element-container .view-header a:hover,
+#tuition-calculator-region
+  .views-element-container
+  .view-footer
+  a:not(.diagonal):hover {
+  color: #fdb736;
+  background-size: 0% 1px;
+}
+/***Views Exposed Form***/
+.utc-tuition-form {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.utc-tuition-form .form-item label:not(.option) {
+  font-size: 1.2rem;
+  font-family: 'Oswald', sans-serif;
+  color: #fdb736;
+}
+.utc-tuition-form ul {
+  margin-left: 0;
+  margin-top: 12px;
+  padding-left: 0;
+}
+.utc-tuition-form li {
+  list-style: none;
+  height: fit-content;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#tuition-calculator-region .utc-tuition-form a,
+#tuition-calculator-region .views-element-container .view-footer a.diagonal {
+  border: 1px solid #fff;
+  color: #fff;
+  background-image: -webkit-linear-gradient(
+    257deg,
+    #fdb736 50%,
+    transparent 50%
+  );
+  background-image: linear-gradient(-257deg, #fdb736 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: all 750ms ease-in-out;
+  white-space: nowrap;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+#tuition-calculator-region .utc-tuition-form a:hover,
+#tuition-calculator-region
+  .views-element-container
+  .view-footer
+  a.diagonal:hover {
+  color: #112e51;
+  background-position: 0;
+}
+.selection-1-true .form-item-field-student-type-value a.bef-link--selected,
+.selection-2-true .form-item-field-delivery-type-value a.bef-link--selected,
+.selection-3-true .form-item-field-residency-type-value a.bef-link--selected {
+  background: #fdb736;
+  color: #112e51 !important;
+}
+.utc-tuition-form li.tuition-placeholder-btn {
+  background: repeating-linear-gradient(
+    -77deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5),
+    1px,
+    transparent 1px,
+    transparent 20px
+  );
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  height: 100%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  min-height: 56px;
+}
+
+#edit-submit-tuition-calculator,
+.utc-tuition-form #edit-actions,
+.utc-tuition-form .form-actions,
+.utc-tuition-form .form-actions:after {
+  margin: 0;
+  height: 0;
+  padding: 0;
+  visibility: hidden;
+}
+.tuition-footer-btns {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+/***Tuition results block***/
+#tuition-results-block {
+  height: 0;
+  display: none;
+  background: #e7eaee;
+  padding: 36px;
+  margin-bottom: 24px;
+}
+.selection-1-true.selection-2-true.selection-3-true #tuition-results-block {
+  height: fit-content !important;
+  display: block;
+  max-height: 190px;
+}
+#tuition-results-block,
+h3.empty-tuition {
+  background: #f9f9f9;
+  padding: 36px;
+  margin-top: -24px;
+  margin-bottom: 24px;
+  font-size: 1.25rem;
+  color: #112e51;
+}
+h3.empty-tuition {
+  text-align: center;
+}
+.tuition-thead {
+  width: 200px;
+  text-align: right;
+  font-family: 'Oswald', sans-serif;
+}
+.tuition-price {
+  width: 150px;
+  text-align: right;
+}
+.tuition-req {
+  width: 24px;
+  text-align: left;
+}
+.extra-fees td {
+  padding-bottom: 6px;
+}
+.tuition-total {
+  border-top: 6px double #fdb736;
+}
+.tuition-total .tuition-price {
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.tuition-total td {
+  padding: 12px;
+}
+span.required-wrapper {
+  width: 12px;
+  display: inline-block;
+  position: relative;
+}
+.required-wrapper .required {
+  color: red;
+  font-size: 36px;
+  position: absolute;
+  top: -12px;
+}
+td.tuition-req {
+  padding-left: 0;
+  padding-top: 0;
+}
+#tuition-calculator-region .views-element-container .view-footer li {
+  color: #fff;
+}
+@media (max-width:1280px){
+  .tuition-footer-btns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .utc-tuition-form {
+    grid-template-columns: 1fr;
+  }
+  .tuition-price {
+    width: 100px;
+  }
+  .tuition-footer-btns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*.block-loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #fdb736;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+.block-loader.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+*/

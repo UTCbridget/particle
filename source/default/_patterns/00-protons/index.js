@@ -45,6 +45,7 @@ import './legacy/css/components/UTC-custom-blocks/_utc_video_component.css';
 import './legacy/css/components/navigation/_top-workbench-menu.css';
 import './legacy/css/components/UTC-custom-blocks/_utc_table_block.css';
 import './legacy/css/pages/utc_academic_programs.css';
+import './legacy/css/components/UTC-custom-blocks/_utc_tuition_calculator.css';
 
 //Legacy JS
 import './legacy/js/utc-sidebar-menu.js';
@@ -53,6 +54,7 @@ import './legacy/js/utc-quoteblock.js';
 import './legacy/js/back-to-top-button.js';
 import './legacy/js/superfish-accessibility-attr.js';
 import './legacy/js/utc-academic-programs.js';
+import './legacy/js/utc-tuition-calculator.js';
 
 // Export global variables.
 export default {

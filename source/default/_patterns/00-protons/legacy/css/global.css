@@ -308,7 +308,8 @@ ul.centered-list li {
 .UTCtextblock__links a:not(.btn):not(.ckeditor-accordion-toggler),
 .utc-card-2__text a:not(.btn):not(.ckeditor-accordion-toggler),
 .utc-sidebar-card a:not(.btn):not(.ckeditor-accordion-toggler),
-.utc-item-card a:not(.btn):not(.ckeditor-accordion-toggler) {
+.utc-item-card a:not(.btn):not(.ckeditor-accordion-toggler),
+.views-element-container a {
   font-weight: 400;
   color: #116484;
   border: none;
@@ -322,7 +323,8 @@ ul.centered-list li {
 .UTCtextblock__links a:not(.btn):not(.ckeditor-accordion-toggler):hover,
 .utc-card-2__text a:not(.btn):not(.ckeditor-accordion-toggler):hover,
 .utc-sidebar-card a:not(.btn):not(.ckeditor-accordion-toggler):hover,
-.utc-item-card a:not(.btn):not(.ckeditor-accordion-toggler):hover {
+.utc-item-card a:not(.btn):not(.ckeditor-accordion-toggler):hover,
+.views-element-container a:hover {
   @apply text-utc-new-blue-800;
   background-size: 0% 1px;
 }
