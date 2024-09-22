@@ -19,7 +19,7 @@ p {
   text-rendering: optimizeLegibility;
 }
 h1,
-h2,
+h2:not(.messages__title),
 h3,
 h4,
 h5,

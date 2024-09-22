@@ -9,7 +9,7 @@
   padding: 24px 36px 48px;
   border: 1px solid #112e51;
   color: #fff;
-  height:fit-content;
+  height: fit-content;
 }
 img.tuition-power-c {
   max-width: 3.25rem;
@@ -22,7 +22,10 @@ img.tuition-power-c {
   color: #fff;
 }
 #tuition-calculator-region .views-element-container .view-header a,
-#tuition-calculator-region .views-element-container .view-footer a {
+#tuition-calculator-region
+  .views-element-container
+  .view-footer
+  a:not(.diagonal) {
   font-weight: 400;
   color: #fff;
   border: none;
@@ -34,7 +37,10 @@ img.tuition-power-c {
   transition: all 0.3s;
 }
 #tuition-calculator-region .views-element-container .view-header a:hover,
-#tuition-calculator-region .views-element-container .view-footer a:hover {
+#tuition-calculator-region
+  .views-element-container
+  .view-footer
+  a:not(.diagonal):hover {
   color: #fdb736;
   background-size: 0% 1px;
 }
@@ -59,7 +65,9 @@ img.tuition-power-c {
   margin-top: 12px;
   margin-bottom: 12px;
 }
-#tuition-calculator-region .utc-tuition-form a {
+
+#tuition-calculator-region .utc-tuition-form a,
+#tuition-calculator-region .views-element-container .view-footer a.diagonal {
   border: 1px solid #fff;
   color: #fff;
   background-image: -webkit-linear-gradient(
@@ -74,12 +82,16 @@ img.tuition-power-c {
   white-space: nowrap;
   margin: 0 auto;
   padding: 0.75rem 1rem;
-  font-weight: bold;
+  font-weight: 500;
   width: 100%;
   display: inline-block;
   text-align: center;
 }
-#tuition-calculator-region .utc-tuition-form a:hover {
+#tuition-calculator-region .utc-tuition-form a:hover,
+#tuition-calculator-region
+  .views-element-container
+  .view-footer
+  a.diagonal:hover {
   color: #112e51;
   background-position: 0;
 }
@@ -88,6 +100,22 @@ img.tuition-power-c {
 .selection-3-true .form-item-field-residency-type-value a.bef-link--selected {
   background: #fdb736;
   color: #112e51 !important;
+}
+.utc-tuition-form li.tuition-placeholder-btn {
+  background: repeating-linear-gradient(
+    -77deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5),
+    1px,
+    transparent 1px,
+    transparent 20px
+  );
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  height: 100%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  min-height: 56px;
 }
 
 #edit-submit-tuition-calculator,
@@ -99,7 +127,9 @@ img.tuition-power-c {
   padding: 0;
   visibility: hidden;
 }
-
+.tuition-footer-btns {
+  gap: 1rem;
+}
 /***Tuition results block***/
 #tuition-results-block {
   height: 0;
@@ -167,7 +197,9 @@ td.tuition-req {
   padding-left: 0;
   padding-top: 0;
 }
-
+#tuition-calculator-region .views-element-container .view-footer li {
+  color: #fff;
+}
 @media (max-width: 640px) {
   .utc-tuition-form {
     grid-template-columns: 1fr;
@@ -176,3 +208,28 @@ td.tuition-req {
     width: 100px;
   }
 }
+
+/*.block-loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #fdb736;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+.block-loader.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+*/

@@ -40,6 +40,18 @@
           $(this).addClass('option-selected');
         });
       }
+      $('.bef-links[name="field_student_type_value"] ul,.bef-links[name="field_delivery_type_value"] ul').append(
+        '<li class="tuition-placeholder-btn"></li>'
+      );
+      /*document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            document.querySelector(".block--utc-tuition-block").style.visibility = "hidden";
+            document.querySelector(".block-loader").style.visibility = "visible";
+        } else {
+            document.querySelector(".block-loader").style.display = "none";
+            document.querySelector(".block--utc-tuition-block").style.visibility = "visible";
+        }
+      };*/
     },
   };
 })(jQuery, Drupal, drupalSettings);

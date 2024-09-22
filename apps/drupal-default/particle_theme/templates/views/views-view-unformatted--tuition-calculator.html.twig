@@ -15,7 +15,6 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-
 <div id='tuition-results-block' class="tuition-results-block">
 	{% for row in rows %}
 		{% set tuition_cost = row.content['#row']._entity.field_tuition_cost.value %}
