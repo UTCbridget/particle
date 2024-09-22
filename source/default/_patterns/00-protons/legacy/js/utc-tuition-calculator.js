@@ -2,10 +2,14 @@
   'use strict';
   Drupal.behaviors.tuitioncalculator = {
     attach: function (context, settings) {
-      console.log('tuition js loaded.');
+      //console.log('tuition js loaded.');
+
+      $('.block.block--utc-tuition-block').css({ 'display':'block!important' });
+
       var tuitionForm = document.getElementsByClassName(
         'block--utc-tuition-block'
       );
+
       if ($(tuitionForm).length > 0) {
         $('body').addClass('tuition-calculator-page');
         $(tuitionForm).each(function () {
@@ -40,9 +44,9 @@
           $(this).addClass('option-selected');
         });
       }
-      $('.bef-links[name="field_student_type_value"] ul,.bef-links[name="field_delivery_type_value"] ul').append(
-        '<li class="tuition-placeholder-btn"></li>'
-      );
+      $(
+        '.bef-links[name="field_student_type_value"] ul,.bef-links[name="field_delivery_type_value"] ul'
+      ).append('<li class="tuition-placeholder-btn"></li>');
       /*document.onreadystatechange = function() {
         if (document.readyState !== "complete") {
             document.querySelector(".block--utc-tuition-block").style.visibility = "hidden";

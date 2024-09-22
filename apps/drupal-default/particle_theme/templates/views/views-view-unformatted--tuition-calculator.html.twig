@@ -20,7 +20,7 @@
 		{% set tuition_cost = row.content['#row']._entity.field_tuition_cost.value %}
 		{% set extra_fees = row.content['#row']._entity.field_additional_fees.value %}
 		{% set total_cost = tuition_cost + extra_fees %}
-		<div class="w-full lg:w-1/2 flex justify-around mx-auto">
+		<div class="w-full flex justify-around mx-auto">
 			<table>
 				<tr class="tuition-cost"><td class="tuition-thead"><strong>Tuition: </strong></td><td class="tuition-price">${{ tuition_cost|number_format(2) }}</td><td></td></tr>
 				<tr class="extra-fees"><td class="tuition-thead"><strong>Additional fees: </strong></td><td class="tuition-price">${{ extra_fees|number_format(2) }}</td><td></td></tr>

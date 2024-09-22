@@ -128,6 +128,8 @@ img.tuition-power-c {
   visibility: hidden;
 }
 .tuition-footer-btns {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
 /***Tuition results block***/
@@ -200,12 +202,21 @@ td.tuition-req {
 #tuition-calculator-region .views-element-container .view-footer li {
   color: #fff;
 }
+@media (max-width:1280px){
+  .tuition-footer-btns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 @media (max-width: 640px) {
   .utc-tuition-form {
     grid-template-columns: 1fr;
   }
   .tuition-price {
     width: 100px;
+  }
+  .tuition-footer-btns {
+    grid-template-columns: 1fr;
   }
 }
 
