@@ -25,12 +25,8 @@
  * @see template_preprocess_block()
  */
 #}
-{%
-  set classes = [
-	'block--utc-tuition-block',
-  ]
-%}
-<div {{ attributes.addClass(classes) }} style="display:none;">
+
+<div class="views-element-container block--views block--views-block:tuition-calculator-block-1 block--utc-tuition-block">
   {{ title_prefix }}
     {% if label %}
       <h2{{ title_attributes }}>

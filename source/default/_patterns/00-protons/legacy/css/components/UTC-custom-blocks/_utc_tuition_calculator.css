@@ -1,3 +1,6 @@
+.block--utc-tuition-block{
+  display:none;
+}
 #tuition-calculator-region {
   background: repeating-linear-gradient(
     -77deg,
