@@ -8,16 +8,23 @@
         'block--utc-tuition-block'
       );
 
+      var something = (function () {
+        var executed = false;
+        return function () {
+          if (!executed) {
+            executed = true;
+            $('.bef-links[name="field_student_type_value"] ul').append(
+              '<li class="tuition-placeholder-btn"></li>'
+            );
+          }
+        };
+      })();
+
+      something(); // "do something" happens
+      something(); // nothing happens
+
       if ($(tuitionForm).length > 0) {
-
         $('.block--utc-tuition-block').addClass('block');
-
-        $('.bef-links[name="field_student_type_value"] ul').append(
-          '<li class="tuition-placeholder-btn"></li>'
-        );
-        $('.bef-links[name="field_delivery_type_value"] ul').append(
-          '<li class="tuition-placeholder-btn"></li>'
-        );
 
         $('body').addClass('tuition-calculator-page');
         $(tuitionForm).each(function () {
@@ -50,6 +57,21 @@
           $('#tuition-calculator-region').addClass('selection-3-true');
           $(this).addClass('option-selected');
         });
+      }
+      var addBtnPlaceholder = (function () {
+        var executed = false;
+        return function () {
+          if (!executed) {
+            executed = true;
+            $('.bef-links[name="field_student_type_value"] ul,.bef-links[name="field_delivery_type_value"] ul').append(
+              '<li class="tuition-placeholder-btn"></li>'
+            );
+          }
+        };
+      })();
+      if ($('body').hasClass('tuition-calculator-page')){
+        addBtnPlaceholder(); // "do something" happens
+        //addBtnPlaceholder(); // nothing happens
       }
     },
   };

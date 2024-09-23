@@ -1,5 +1,5 @@
-.block--utc-tuition-block{
-  display:none;
+.block--utc-tuition-block {
+  display: none;
 }
 #tuition-calculator-region {
   background: repeating-linear-gradient(
@@ -60,8 +60,9 @@ img.tuition-power-c {
 .utc-tuition-form ul {
   margin-left: 0;
   margin-top: 12px;
-  padding-left: 0;
+  padding-left: 0!important;
 }
+
 .utc-tuition-form li {
   list-style: none;
   height: fit-content;
@@ -120,6 +121,9 @@ img.tuition-power-c {
   width: 100%;
   min-height: 56px;
 }
+.utc-tuition-form li.tuition-placeholder-btn:not(:nth-child(3)){
+  display:none;
+}
 
 #edit-submit-tuition-calculator,
 .utc-tuition-form #edit-actions,
@@ -131,7 +135,7 @@ img.tuition-power-c {
   visibility: hidden;
 }
 .tuition-footer-btns {
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
@@ -205,7 +209,7 @@ td.tuition-req {
 #tuition-calculator-region .views-element-container .view-footer li {
   color: #fff;
 }
-@media (max-width:1280px){
+@media (max-width: 1280px) {
   .tuition-footer-btns {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
