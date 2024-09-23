@@ -8,21 +8,6 @@
         'block--utc-tuition-block'
       );
 
-      var something = (function () {
-        var executed = false;
-        return function () {
-          if (!executed) {
-            executed = true;
-            $('.bef-links[name="field_student_type_value"] ul').append(
-              '<li class="tuition-placeholder-btn"></li>'
-            );
-          }
-        };
-      })();
-
-      something(); // "do something" happens
-      something(); // nothing happens
-
       if ($(tuitionForm).length > 0) {
         $('.block--utc-tuition-block').addClass('block');
 
@@ -70,8 +55,7 @@
         };
       })();
       if ($('body').hasClass('tuition-calculator-page')){
-        addBtnPlaceholder(); // "do something" happens
-        //addBtnPlaceholder(); // nothing happens
+        addBtnPlaceholder(); 
       }
     },
   };
