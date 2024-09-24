@@ -24,7 +24,7 @@
             <th class="degree">Bachelor</th>
             <th class="degree">Minor</th>
             <th class="degree">Master</th>
-            <th class="degree">Doctoral</th>
+            <th class="degree">Specialist/Doctoral</th>
             <th class="degree">Certificate</th>
         </tr>
     </thead>
@@ -40,7 +40,7 @@
                 <tr class="program-btn program-block" data-src="{{ detailID }}">
                     {% if  onlineAvailability %}
                         <td id="{{ btnID }}" class="program-name" >{{ row.content['#row']._entity.field_program_name.0.value }}<br />
-                            <div class="online-tag">100% Online Available</div>
+                            <div class="online-tag">100% Online Option</div>
                         </td>
                     {% else %}
                         <td id="{{ btnID }}" class="program-name" >{{ row.content['#row']._entity.field_program_name.0.value }}</td>
@@ -103,13 +103,13 @@
                     
                         
                         <h2 style="margin-top:24px;font-size:1.75rem;">{{ programName }}</h2>
-                        
-                        <div class="degree-list"><strong>Degree(s) available: </strong>
+
+                         <div class="degree-list"><strong>Degree(s) available: </strong>
                         <!--keep these in one row to fix spacing issues-->
-                           {{ row.content['#row']._entity.field_degree_options.0.value|replace({'graduate': 'master'})|capitalize|replace({' ': ''}) }}{% if row.content['#row']._entity.field_degree_options.1.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.1.value|replace({'graduate': 'master'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.2.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.2.value|replace({'graduate': 'master'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.3.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.3.value|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.4.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.4.value|capitalize }}{% endif %}
+                           {{ row.content['#row']._entity.field_degree_options.0.value|replace({'graduate': 'master','doctoral': 'Specialist/ Doctoral',})|capitalize|replace({' ': ''}) }}{% if row.content['#row']._entity.field_degree_options.1.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.1.value|replace({'graduate': 'master','doctoral': 'Specialist/ Doctoral'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.2.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.2.value|replace({'graduate': 'master','doctoral': 'Specialist/ Doctoral'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.3.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.3.value|replace({'doctoral': 'Specialist/ Doctoral'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.4.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.4.value|replace({'doctoral': 'Specialist/Doctoral'})|capitalize }}{% endif %}
                         </div>
                         {% if  onlineAvailability %}
-                            <div class="online-tag"  style="margin-top: 1rem;margin-bottom: .25rem;">100% Online Available</div>
+                            <div class="online-tag"  style="margin-top: 1rem;margin-bottom: .25rem;">100% Online Option</div>
                         {% endif %}
   
                         <div class="program-copy">{{row.content['#row']._entity.field_summary_description.value|raw }}</div>

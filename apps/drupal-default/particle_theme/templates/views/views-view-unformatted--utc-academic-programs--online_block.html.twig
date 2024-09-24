@@ -16,7 +16,7 @@
  */
 #}
 
-<table class="program-table" style="border-collapse: collapse; ">
+<table class="program-table" style="border-collapse: separate; ">
     <thead>
         <tr>
             <td class="program-name" style="text-align:center;">Program Area<br><span class="smaller-text">Click on a program for more details.</span></td>
@@ -24,7 +24,7 @@
             <td class="degree">Bachelor</td>
             <td class="degree">Minor</td>
             <td class="degree">Master</td>
-            <td class="degree">Doctoral</td>
+            <td class="degree">Specialist/Doctoral</td>
             <td class="degree">Certificate</td>
         </tr>
     </thead>
@@ -38,14 +38,9 @@
 
 
                 <tr class="program-btn" data-src="{{ detailID }}">
-                   {% if  onlineAvailability %}
-                        <td id="{{ btnID }}" class="program-name" >{{ row.content['#row']._entity.field_program_name.0.value }}<br />
-                            <div class="online-tag">100% Online Available</div>
-                        </td>
-                    {% else %}
-                        <td id="{{ btnID }}" class="program-name" >{{ row.content['#row']._entity.field_program_name.0.value }}</td>
-                    {% endif %}
-                    
+
+                    <td id="{{ btnID }}" class="program-name" >{{ row.content['#row']._entity.field_program_name.0.value }}</td>
+
                     <td class="degree bachelor">
                         {% if row.content['#row']._entity.field_degree_options.0.value  == 'bachelor' %}
                             <span class="checkmark">&#10003;</span>
@@ -104,13 +99,11 @@
                         
                         <h2 style="margin-top:24px;font-size:1.75rem;">{{ programName }}</h2>
                         
-                        <div class="degree-list"><strong>Degree(s) available: </strong>
+                         <div class="degree-list"><strong>Degree(s) available: </strong>
                         <!--keep these in one row to fix spacing issues-->
-                           {{ row.content['#row']._entity.field_degree_options.0.value|replace({'graduate': 'master\'s'})|capitalize|replace({' ': ''}) }}{% if row.content['#row']._entity.field_degree_options.1.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.1.value|replace({'graduate': 'master\'s'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.2.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.2.value|replace({'graduate': 'master\'s'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.3.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.3.value|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.4.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.4.value|capitalize }}{% endif %}
+                           {{ row.content['#row']._entity.field_degree_options.0.value|replace({'graduate': 'master','doctoral': 'Specialist/ Doctoral',})|capitalize|replace({' ': ''}) }}{% if row.content['#row']._entity.field_degree_options.1.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.1.value|replace({'graduate': 'master','doctoral': 'Specialist/ Doctoral'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.2.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.2.value|replace({'graduate': 'master','doctoral': 'Specialist/ Doctoral'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.3.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.3.value|replace({'doctoral': 'Specialist/ Doctoral'})|capitalize|replace({' ': ''}) }}{% endif %}{% if row.content['#row']._entity.field_degree_options.4.value is not empty %}, {{ row.content['#row']._entity.field_degree_options.4.value|replace({'doctoral': 'Specialist/Doctoral'})|capitalize }}{% endif %}
                         </div>
-                        {% if  onlineAvailability %}
-                        <div class="online-tag" style="margin-top: 1rem;margin-bottom: .25rem;">100% Online Available</div>
-                        {% endif %}
+
                         <div class="program-copy">{{ row.content['#row']._entity.field_summary_description.value|raw }}</div>
                         
                         {% if youtubeurl %}
