@@ -1,4 +1,4 @@
-.utc-programs-page .utcpage-title {
+.utc-programs-page.modal-programs-video-window .utcpage-title {
   padding-top: 0.25rem;
 }
 /*.utc-programs-page .layout-container > .container {overflow-x:hidden;}*/
@@ -9,6 +9,12 @@
   .page-title,
 .utc-programs-page .block--layout-builder.block--page-title-block .page-title {
   display: none;
+}
+.utc-programs-page .program-page-title-and-crumbs,
+.utc-programs-page #block-breadcrumbs-particle {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .program-subhead {
   display: flex;
@@ -27,7 +33,17 @@
 .utc-academic-programs-block {
   width: 100%;
   margin: 0 auto 2rem;
+  background: #e7eaee;
+  padding: 6px 12px;
 }
+.utc-academic-programs-block header {
+  display: flex;
+  justify-content: space-between;
+}
+.programs-block-present th {
+  border-bottom: 1px solid #112e51;
+}
+
 .utc-academic-programs-page h3 {
   display: inline;
   margin: 0;
@@ -40,7 +56,7 @@
 .utc-academic-programs-page .lead {
   font-size: 1.1rem !important;
 }
-.utc-academic-programs-page .program-results span {
+.utc-academic-programs-page .program-results span, .utc-academic-programs-block .program-results span {
   font-weight: bold;
 }
 .program-overlay {
@@ -222,7 +238,9 @@ a.bef-toggle.bef-toggle--select-all {
   width: 100%;
   border: 1px solid #112e51;
 }
-.utc-programs-block .program-table {
+
+.utc-programs-block .program-table,
+.utc-programs-page.programs-block-present .program-table {
   border: none;
 }
 .utc-programs-page thead {
@@ -491,6 +509,12 @@ a.degrees-video.degrees-video-online {
   border-radius: 0.2rem;
 }
 
+@media (max-width: 1530px) {
+  .form-checkboxes .form-item.form-item-field-degree-options-value-doctoral label.option {
+    max-width: 90px;
+    word-break: break-word;
+  }
+}
 @media (max-width: 991px) {
   .program-page-title-and-crumbs {
     max-width: 90%;
@@ -520,6 +544,7 @@ a.degrees-video.degrees-video-online {
     margin-top: 24px;
   }
 }
+
 @media (max-width: 991px) and (orientation: landscape) {
   #dp-modal {
     padding-top: 0;
@@ -700,6 +725,10 @@ a.degrees-video.degrees-video-online {
   .utc-programs-page td.online-100:before {
     top: 15px;
   }
+
+  .utc-programs-page td {
+    white-space: pre-wrap;
+  }
   /*
 	Label the data
 	*/
@@ -717,7 +746,7 @@ a.degrees-video.degrees-video-online {
     content: 'Master:';
   }
   .utc-programs-page td:nth-of-type(5):before {
-    content: 'Doctoral:';
+    content: 'Specialist/ /A Doctoral:';
   }
   .utc-programs-page td:nth-of-type(6):before {
     content: 'Certificate:';
@@ -755,7 +784,7 @@ a.degrees-video.degrees-video-online {
   align-items: center;
 }
 .form-item-field-online-available-value:before {
-  content: '100% Online Available';
+  content: '100% Online Option';
   font-family: Oswald, sans-serif;
   font-size: 0.9rem;
   color: #112e51;

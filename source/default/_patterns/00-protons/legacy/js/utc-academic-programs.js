@@ -5,11 +5,11 @@
       //console.log("utc-academic-programs.js is loaded.")
 
       if (window.location.href.indexOf('degrees-and-programs') > -1) {
-        $('body').addClass('utc-programs-page');
+        $('body').addClass('utc-programs-page').addClass('modal-programs-video-window');
       }
       var programBlock = document.getElementsByClassName('utc-programs-block');
       if ($(programBlock).length > 0) {
-        $('body').addClass('utc-programs-page');
+        $('body').addClass('utc-programs-page').addClass('programs-block-present');
       }
       $(window).scroll(function () {
         if ($(this).scrollTop() > 925) {
@@ -49,23 +49,21 @@
           ghostMainContent();
         });
       }
-      if ($(programBlock).length > 0) {
-        $('.program-btn').each(function () {
-          var getProgramBtnDetailId = $(this).attr('data-src');
-          $(this).on('click', function () {
-            togglediv(getProgramBtnDetailId);
-          });
+      $('.program-btn').each(function () {
+        var getProgramBtnDetailId = $(this).attr('data-src');
+        $(this).on('click', function () {
+          togglediv(getProgramBtnDetailId);
+          //console.log('program open btn clicked.');
         });
-        $('.close-btn').each(function () {
-          var parentId = $(this)
-            .closest('.offscreen-program-details')
-            .attr('id');
-          $(this).on('click', function () {
-            $('#' + parentId).css('right', '-650px');
-            unghostMainContent();
-          });
+      });
+      $('.close-btn').each(function () {
+        var parentId = $(this).closest('.offscreen-program-details').attr('id');
+        $(this).on('click', function () {
+          $('#' + parentId).css('right', '-650px');
+          unghostMainContent();
+          //console.log('program close btn clicked.');
         });
-      }
+      });
       $(document).mouseup(function (e) {
         if ($(e.target).closest('.offscreen-program-details').length === 0) {
           $('.offscreen-program-details').css('right', '-650px');
@@ -78,34 +76,25 @@
           .wrapAll("<div class='program-window'></div>");
       });
 
-      /***JS for the video modal window */
-      // Get the modal
-      var modal = document.getElementById('dp-modal');
-
-      // Get the button that opens the modal
-      var btn = document.getElementById('dp-modal-button');
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName('close-modal')[0];
-
-      if ($(programBlock).length > 0) {
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-          modal.style.display = 'flex';
+      if ($('body').hasClass('modal-programs-video-window')){
+        var modalVideoWindow = document.getElementById('dp-modal');
+        var modalVideoBtn = document.getElementById('dp-modal-button');
+        var modalVideoCloseBtn = document.getElementsByClassName('close-modal')[0];
+        modalVideoBtn.onclick = function () {
+          modalVideoWindow.style.display = 'flex';
+          //console.log('video modal link clicked.');
         };
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-          modal.style.display = 'none';
+        modalVideoCloseBtn.onclick = function () {
+          modalVideoWindow.style.display = 'none';
+          //console.log('video modal close btn clicked.')
         };
-
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
-          if (event.target == modal) {
-            modal.style.display = 'none';
+          if (event.target == modalVideoWindow) {
+            modalVideoWindow.style.display = 'none';
           }
         };
       }
+
     },
   };
 })(jQuery, Drupal, drupalSettings);
