@@ -731,10 +731,6 @@ a.degrees-video.degrees-video-online {
   .utc-programs-page td.online-100:before {
     top: 15px;
   }
-
-  .utc-programs-page td {
-    white-space: pre-wrap;
-  }
   /*
 	Label the data
 	*/
@@ -752,7 +748,7 @@ a.degrees-video.degrees-video-online {
     content: 'Master:';
   }
   .utc-programs-page td:nth-of-type(5):before {
-    content: 'Specialist/ /A Doctoral:';
+    content: 'Spec./Dr.:';
   }
   .utc-programs-page td:nth-of-type(6):before {
     content: 'Certificate:';
