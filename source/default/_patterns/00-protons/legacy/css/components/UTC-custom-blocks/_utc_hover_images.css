@@ -36,6 +36,10 @@ figure.utc-hover-image-effect .utc-border-wrapper {
 figure.utc-hover-image-effect .hover-inner {
   @apply border-l-4 border-utc-new-gold-500 pl-4;
 }
+figure.utc-hover-image-effect .hover-inner.no-hover-text {
+  justify-content: center;
+  gap:18px;
+}
 figure.utc-hover-image-effect h2,
 figure.utc-hover-image-effect p {
   @apply opacity-0;
