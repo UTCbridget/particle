@@ -71,20 +71,35 @@
                 {% if paragraph_url_title %}
                      <figcaption class="absolute block left-0 right-0 w-full cursor-pointer">
                         <div class="utc-border-wrapper">
-                            <div class="hover-inner">
-                                <h2 class="m-0 font-bold capitalize text-utc-new-blue-500 leading-tight">{{ paragraph_title }}</h2>
+                            {% if paragraph_text %}
+                              <div class="hover-inner">
+                                <h2 class="m-0 font-bold text-utc-new-blue-500 leading-tight">{{ paragraph_title }}</h2>
                                 <p class="text-utc-new-blue-500 leading-tight">{{ paragraph_text }}</p>
                                 <a class="hover-button" href="{{ paragraph_url }}" title="{{ paragraph_url_title }}" ><span>{{ paragraph_url_title }}</span></a>
-                            </div>
+                              </div>
+                            {% else %}
+                              <div class="hover-inner no-hover-text">
+                                <h2 class="m-0 font-bold text-utc-new-blue-500 leading-tight">{{ paragraph_title }}</h2>
+                                <a class="hover-button" href="{{ paragraph_url }}" title="{{ paragraph_url_title }}" ><span>{{ paragraph_url_title }}</span></a>
+                              </div>
+                            {% endif %}
                         </div>
                     </figcaption>
                 {% else %}
                     <figcaption class="absolute block left-0 right-0 w-full cursor-default">
                         <div class="utc-border-wrapper">
-                            <div class="hover-inner">
-                                <h2 class="m-0 font-bold capitalize text-utc-new-blue-500 leading-tight">{{ paragraph_title }}</h2>
+                            {% if paragraph_text %}
+                              <div class="hover-inner">
+                                <h2 class="m-0 font-bold text-utc-new-blue-500 leading-tight">{{ paragraph_title }}</h2>
                                 <p class="text-utc-new-blue-500 leading-tight">{{ paragraph_text }}</p>
-                            </div>
+                                <a class="hover-button" href="{{ paragraph_url }}" title="{{ paragraph_url_title }}" ><span>{{ paragraph_url_title }}</span></a>
+                              </div>
+                            {% else %}
+                              <div class="hover-inner no-hover-text">
+                                <h2 class="m-0 font-bold text-utc-new-blue-500 leading-tight">{{ paragraph_title }}</h2>
+                                <a class="hover-button" href="{{ paragraph_url }}" title="{{ paragraph_url_title }}" ><span>{{ paragraph_url_title }}</span></a>
+                              </div>
+                            {% endif %}
                         </div>
                     </figcaption>
                 {% endif %}
