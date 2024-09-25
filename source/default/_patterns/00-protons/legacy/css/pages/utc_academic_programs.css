@@ -509,8 +509,14 @@ a.degrees-video.degrees-video-online {
   border-radius: 0.2rem;
 }
 
-@media (max-width: 1530px) {
-  .form-checkboxes .form-item.form-item-field-degree-options-value-doctoral label.option {
+@media (min-width:768px) and (max-width: 1530px) {
+  .programs-block-present .form-checkboxes .form-item.form-item-field-degree-options-value-doctoral label.option {
+    max-width: 90px;
+    word-break: break-word;
+  }
+}
+@media (min-width:768px) and (max-width: 1280px) {
+  .modal-programs-video-window .form-checkboxes .form-item.form-item-field-degree-options-value-doctoral label.option {
     max-width: 90px;
     word-break: break-word;
   }
