@@ -330,17 +330,7 @@ a.majors-selection-video:hover {
   @apply text-utc-new-blue-800;
   background-size: 0% 1px;
 }
-.localist_widget_container .action_button a {
-  text-decoration: none !important;
-  border: 1px solid #112e51 !important;
-  color: #fff !important;
-  background-image: unset !important;
-  background-position: unset !important;
-}
 
-.localist_widget_container .action_button a:hover {
-  color: #112e51 !important;
-}
 .ckeditor-accordion-container > dl dt > a,
 .ckeditor-accordion-container > dl dt > a:not(.button) {
   font-family: 'Oswald', sans-serif !important;
@@ -951,4 +941,26 @@ button.header__toggleable-button.js-toggle-search:hover,
   font-family: sans-serif;
   font-size: small;
   line-height: 0.8em;
+}
+
+/***localist fixes***/
+
+.localist_widget_container .action_button a,.utc-buy-ticket-btn {
+  text-decoration: none !important;
+  background-color: #112e51;
+  border: 1px solid #112e51 !important;
+  color: #fff !important;
+  padding: 6px 12px;
+  background-image: unset !important;
+  background-position: unset !important;
+}
+.localist_widget_container .action_button a:hover,.utc-buy-ticket-btn:hover {
+  color: #112e51 !important;
+  background-color:#fdb736;
+}
+  .localist-widget-hl .event-title {
+    white-space:normal;
+  }
+.UTCtextblock__links .localist-widget .event-title a:not(.btn):not(.ckeditor-accordion-toggler) {
+    background-image: none !important;
 }
