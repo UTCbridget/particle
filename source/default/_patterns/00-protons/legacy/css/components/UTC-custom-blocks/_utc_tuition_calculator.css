@@ -1,7 +1,5 @@
 .block--utc-tuition-block {
   display: none;
-}
-#tuition-calculator-region {
   background: repeating-linear-gradient(
     -77deg,
     #0b1e33,
@@ -24,10 +22,10 @@ img.tuition-power-c {
 #tuition-calculator-region p {
   color: #fff;
 }
-#tuition-calculator-region .views-element-container .view-header a,
+#tuition-calculator-region .utc-tuition-block-container header a:not(.diagonal),
 #tuition-calculator-region
-  .views-element-container
-  .view-footer
+  .utc-tuition-block-container
+  footer
   a:not(.diagonal) {
   font-weight: 400;
   color: #fff;
@@ -39,13 +37,19 @@ img.tuition-power-c {
   background-size: 100% 1px;
   transition: all 0.3s;
 }
-#tuition-calculator-region .views-element-container .view-header a:hover,
 #tuition-calculator-region
-  .views-element-container
-  .view-footer
+  .utc-tuition-block-container
+  header
+  a:not(.diagonal):hover,
+#tuition-calculator-region
+  .utc-tuition-block-container
+  footer
   a:not(.diagonal):hover {
   color: #fdb736;
   background-size: 0% 1px;
+}
+#tuition-calculator-region li {
+  color: #fff;
 }
 /***Views Exposed Form***/
 .utc-tuition-form {
@@ -60,7 +64,7 @@ img.tuition-power-c {
 .utc-tuition-form ul {
   margin-left: 0;
   margin-top: 12px;
-  padding-left: 0!important;
+  padding-left: 0 !important;
 }
 
 .utc-tuition-form li {
@@ -71,7 +75,7 @@ img.tuition-power-c {
 }
 
 #tuition-calculator-region .utc-tuition-form a,
-#tuition-calculator-region .views-element-container .view-footer a.diagonal {
+.tuition-footer-btns a.diagonal {
   border: 1px solid #fff;
   color: #fff;
   background-image: -webkit-linear-gradient(
@@ -92,10 +96,7 @@ img.tuition-power-c {
   text-align: center;
 }
 #tuition-calculator-region .utc-tuition-form a:hover,
-#tuition-calculator-region
-  .views-element-container
-  .view-footer
-  a.diagonal:hover {
+.tuition-footer-btns a.diagonal:hover {
   color: #112e51;
   background-position: 0;
 }
@@ -121,8 +122,8 @@ img.tuition-power-c {
   width: 100%;
   min-height: 56px;
 }
-.utc-tuition-form li.tuition-placeholder-btn:not(:nth-child(3)){
-  display:none;
+.utc-tuition-form li.tuition-placeholder-btn:not(:nth-child(3)) {
+  display: none;
 }
 
 #edit-submit-tuition-calculator,
@@ -147,6 +148,11 @@ img.tuition-power-c {
   padding: 36px;
   margin-bottom: 24px;
 }
+#tuition-results-block p.no-results {
+  font-size:1rem;
+  color:#112e51;
+  margin-bottom: 1rem !important;
+}
 .selection-1-true.selection-2-true.selection-3-true #tuition-results-block {
   height: fit-content !important;
   display: block;
@@ -165,7 +171,7 @@ h3.empty-tuition {
   text-align: center;
 }
 .tuition-thead {
-  width: 200px;
+  width: 225px;
   text-align: right;
   font-family: 'Oswald', sans-serif;
 }
@@ -206,8 +212,13 @@ td.tuition-req {
   padding-left: 0;
   padding-top: 0;
 }
-#tuition-calculator-region .views-element-container .view-footer li {
-  color: #fff;
+.tuition-estimator-row table {
+  width: fit-content;
+}
+.form-item-field-residency-type-value .bef-links ul li:last-child a.disabled, .form-item-field-delivery-type-value .bef-links ul li:last-child a.disabled {
+  opacity:.5;
+  pointer-events: none;
+  text-decoration: line-through!important;
 }
 @media (max-width: 1280px) {
   .tuition-footer-btns {
@@ -224,30 +235,28 @@ td.tuition-req {
   }
   .tuition-footer-btns {
     grid-template-columns: 1fr;
+    margin-bottom: 36px;
+  }
+  .utc-tuition-block-container header .items-center {
+    align-items: start !important;
+  }
+  #tuition-calculator-region h2 {
+    margin-top: -6px;
+    padding-top: 0;
   }
 }
 
-/*.block-loader {
-  border: 12px solid #f3f3f3;
+.tuition-loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #fdb736; /* Blue */
   border-radius: 50%;
-  border-top: 6px solid #fdb736;
-  width: 70px;
-  height: 70px;
-  animation: spin 1s linear infinite;
-}
-
-.block-loader.center {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-*/
+

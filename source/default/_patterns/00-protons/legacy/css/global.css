@@ -309,7 +309,7 @@ ul.centered-list li {
 .utc-card-2__text a:not(.btn):not(.ckeditor-accordion-toggler),
 .utc-sidebar-card a:not(.btn):not(.ckeditor-accordion-toggler),
 .utc-item-card a:not(.btn):not(.ckeditor-accordion-toggler),
-.views-element-container .block__content a,
+.views-element-container .block__content a:not(.diagonal),
 a.majors-selection-video {
   font-weight: 400;
   color: #116484;
@@ -325,7 +325,7 @@ a.majors-selection-video {
 .utc-card-2__text a:not(.btn):not(.ckeditor-accordion-toggler):hover,
 .utc-sidebar-card a:not(.btn):not(.ckeditor-accordion-toggler):hover,
 .utc-item-card a:not(.btn):not(.ckeditor-accordion-toggler):hover,
-.views-element-container .block__content a:hover,
+.views-element-container .block__content a:not(.diagonal):hover,
 a.majors-selection-video:hover {
   @apply text-utc-new-blue-800;
   background-size: 0% 1px;

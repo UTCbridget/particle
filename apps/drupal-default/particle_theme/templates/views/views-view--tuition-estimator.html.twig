@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+    'utc-tuition-block-container'
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+ <div class="tuition-loader"></div> 
+  {% if rows %}
+
+    <header id="tuition-block-header" class="tuition-block-header">
+        {{ header }}
+    </header>
+
+    <div id="tuition-block-filters" class="tuition-block-filters">
+        {{ exposed }}
+    </div>
+
+    <div id='tuition-results-block' class="tuition-results-block">
+        {{ rows }}
+    </div>
+
+    <footer id="tuition-block-footer" class="tuition-block-footer">
+        {{ footer }}
+    </footer>
+
+  {% else %}
+
+    <header id="tuition-block-header" class="tuition-block-header">
+        <div class="flex items-center"><img src="/sites/default/files/2024-05/power-c-transparent-bg.png" alt="UTC Power C" class="h-full w-auto flex-none tuition-power-c" /><h2 class="flex-1"> Estimate Your Tuition</h2></div>
+        <p>Your education at UTC will help you fly high without emptying your nest egg. With this tuition estimator, you can see the cost of a degree. Contact your area <a href="/enrollment-management-and-student-affairs/admissions/undergraduate-admissions/counselors" title="List of admissions counselors"> Admissions Counselor</a> so you can also calculate scholarships and grants available to you.</p>
+    </header>
+
+    <div id="tuition-block-filters" class="tuition-block-filters">
+        {{ exposed }}
+    </div>
+
+    <div id='tuition-results-block' class="tuition-results-block">
+      <p class="text-center mx-auto mb-8 no-results">No results are available. Please select other options.</p>
+    </div>
+
+    <footer id="tuition-block-footer" class="tuition-block-footer">
+      <p>Get more information:</p>
+      <div class="tuition-footer-btns">
+        <a class="diagonal" href="https://utc.clearcostcalculator.com/student/default/netpricecalculator/survey" title="Go to UTC Net Price Calculator">UTC Net Price Calculator</a> 
+        <a class="diagonal" href="node/32781" title="Go to Financial Aid">Financial Aid</a> 
+        <a class="diagonal" href="node/3266" title="Go to Fee Information">Fee Information</a> 
+        <a class="diagonal" href="node/45281" title="Go to Cost of Attendance">Cost of Attendance</a> 
+      </div> 
+    </footer>
+
+  {% endif %}
+
+</div>
+
