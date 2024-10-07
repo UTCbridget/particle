@@ -56,7 +56,8 @@
 .utc-academic-programs-page .lead {
   font-size: 1.1rem !important;
 }
-.utc-academic-programs-page .program-results span, .utc-academic-programs-block .program-results span {
+.utc-academic-programs-page .program-results span,
+.utc-academic-programs-block .program-results span {
   font-weight: bold;
 }
 .program-overlay {
@@ -509,14 +510,20 @@ a.degrees-video.degrees-video-online {
   border-radius: 0.2rem;
 }
 
-@media (min-width:768px) and (max-width: 1530px) {
-  .programs-block-present .form-checkboxes .form-item.form-item-field-degree-options-value-doctoral label.option {
+@media (min-width: 768px) and (max-width: 1530px) {
+  .programs-block-present
+    .form-checkboxes
+    .form-item.form-item-field-degree-options-value-doctoral
+    label.option {
     max-width: 90px;
     word-break: break-word;
   }
 }
-@media (min-width:768px) and (max-width: 1280px) {
-  .modal-programs-video-window .form-checkboxes .form-item.form-item-field-degree-options-value-doctoral label.option {
+@media (min-width: 768px) and (max-width: 1280px) {
+  .modal-programs-video-window
+    .form-checkboxes
+    .form-item.form-item-field-degree-options-value-doctoral
+    label.option {
     max-width: 90px;
     word-break: break-word;
   }
@@ -564,8 +571,18 @@ a.degrees-video.degrees-video-online {
   .offscreen-program-details {
     width: 100%;
   }
+  .utc-academic-programs-page {
+    width: 95%;
+  }
   .utc-academic-programs-page thead.scrolled {
-    position: relative;
+    position: unset;
+  }
+  .utc-programs-page th.program-name {
+    padding-left: 0 !important;
+  }
+  .utc-programs-page th.degree {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
   }
 }
 @media (max-width: 460px) {
@@ -577,6 +594,9 @@ a.degrees-video.degrees-video-online {
   }
   .utc-academic-programs-page .scroll-to-top-button {
     z-index: 1000000000000000;
+  }
+  .utc-academic-programs-page thead.scrolled {
+    display: none;
   }
   .program-subhead {
     flex-direction: column;
